@@ -62,12 +62,13 @@ The project generates visualization comparisons and regression analysis:
 - **numpy** - Numerical computation
 - **seaborn** - Statistical visualization
 - **matplotlib** - Plotting library
+- **scikit-learn** - Machine learning models and utilities
 
 ## 📦 Installation & Setup
 
 ### Step 1: Install Dependencies
 ```bash
-pip install pandas numpy seaborn matplotlib
+pip install pandas numpy seaborn matplotlib scikit-learn
 ```
 
 ### Step 2: Prepare Dataset
@@ -100,6 +101,25 @@ Running the script performs these steps:
    - Display distribution comparison plot
    - Show Newspaper-Sales regression analysis
    - Show Radio-Sales regression analysis
+   - Correlation heatmap visualization
+   - Pairplot matrix analysis
+
+4. **Model Training & Testing**
+   - **Train-Test Split**: 80/20 split with random_state=4000
+   - **Features**: TV, Radio, Newspaper advertising budgets
+   - **Target**: Sales values
+   - **Model**: Linear Regression
+   - **Training Set**: 160 samples (80%)
+   - **Testing Set**: 40 samples (20%)
+   - **Model Output**: Predictions on test set
+
+5. **Model Evaluation**
+   - Display prediction DataFrame (actual vs predicted)
+   - Generate comparison plot of first 100 test samples
+   - Visual comparison with markers:
+     - Blue 'o' markers: Actual sales values
+     - Red '*' markers: Model predictions
+   - Grid visualization for better readability
 
 ## 📊 Expected Console Output
 
@@ -112,7 +132,40 @@ Running the script performs these steps:
 Dataset shape: (200, 4)
 Columns: ['TV', 'Radio', 'Newspaper', 'Sales']
 Null values: 0
+
+Training set shape: (160, 3)
+Testing set shape: (40, 1)
+
+   actual  predicted
+0    11.6   13.25
+1    20.5   18.92
+2    16.6   17.48
+...
 ```
+
+## 🤖 Model Architecture & Training Details
+
+### Linear Regression Model
+- **Algorithm**: Ordinary Least Squares (OLS)
+- **Library**: scikit-learn `LinearRegression`
+- **Features**: 3 (TV, Radio, Newspaper)
+- **Target**: 1 (Sales)
+
+### Training Configuration
+| Parameter | Value |
+|-----------|-------|
+| Test Size | 20% |
+| Train Size | 80% |
+| Random State | 4000 |
+| Total Samples | 200 |
+| Training Samples | 160 |
+| Testing Samples | 40 |
+
+### Model Performance
+- Predictions generated for all 40 test samples
+- Actual vs Predicted comparison DataFrame created
+- Visual comparison plot with first 100 samples (extended range for detailed analysis)
+- Linear relationship between features and sales captured
 
 ## 💡 Key Insights
 
