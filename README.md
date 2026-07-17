@@ -55,6 +55,21 @@ The project generates visualization comparisons and regression analysis:
    - Radio vs Sales with linear regression fit
    - Correlation coefficients and trend lines
 
+3. **Correlation Heatmap**
+   - Correlation matrix visualization
+   - Identifies relationships between all variables
+   - Color-coded intensity for correlation strength
+
+4. **Pair Plots**
+   - Full pairplot of all variables
+   - Pairplot with selected features (TV, Radio, Newspaper vs Sales)
+   - Regression overlays for key relationships
+
+5. **Model Predictions Plot**
+   - Actual vs Predicted sales values
+   - Visual comparison of model accuracy
+   - First 100 test samples displayed
+
 ## 🛠️ Requirements
 
 - **Python** 3.7+
@@ -120,6 +135,12 @@ Running the script performs these steps:
      - Blue 'o' markers: Actual sales values
      - Red '*' markers: Model predictions
    - Grid visualization for better readability
+   - Calculate and print evaluation metrics:
+     - Mean Squared Error (MSE)
+     - Root Mean Squared Error (RMSE)
+     - Mean Absolute Error (MAE)
+     - R-squared (R²)
+   - Compare training vs testing performance
 
 ## 📊 Expected Console Output
 
