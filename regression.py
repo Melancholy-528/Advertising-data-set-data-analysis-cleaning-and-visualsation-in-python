@@ -4,6 +4,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn import metrics
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 #data exploration
 data = pd.read_csv("/home/melancholy/Downloads/Advertising.csv")
@@ -77,4 +79,24 @@ plt.legend()
 plt.grid()
 plt.show()
 
+#model evaluation metrics
+
+mse = mean_squared_error(y_test, pred['predicted'])
+rmse = np.sqrt(mse)
+mae = mean_absolute_error(y_test, pred['predicted'])
+r2 = r2_score(y_test, pred['predicted'])
+
+print(" Model Evaluation Metrics: ")
+print(f"Mean Squared Error (MSE): {mse:.4f}")
+print(f"Root Mean Squared Error (RMSE): {rmse:.4f}")
+print(f"Mean Absolute Error (MAE): {mae:.4f}")
+print(f"R-squared (R²): {r2:.4f}")
+
+y_pred_train = RE.predict(x_train)
+y_pred_test = RE.predict(x_test)
+
+MAE_train = metrics.mean_absolute_error(y_train,y_pred_train)
+MAE_test = metrics.mean_absolute_error(y_test,y_pred_test)
+print("MAE for training is:".format(MAE_train))
+print("MAE for testing is:".format(MAE_test))
 

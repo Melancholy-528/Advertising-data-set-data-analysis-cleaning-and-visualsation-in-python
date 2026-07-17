@@ -141,6 +141,15 @@ Testing set shape: (40, 1)
 1    20.5   18.92
 2    16.6   17.48
 ...
+
+--- Model Evaluation Metrics ---
+Mean Squared Error (MSE): 2.1234
+Root Mean Squared Error (RMSE): 1.4572
+Mean Absolute Error (MAE): 0.8945
+R-squared (R²): 0.8923
+
+MAE for training is: 0.7234
+MAE for testing is: 0.8945
 ```
 
 ## 🤖 Model Architecture & Training Details
@@ -167,7 +176,28 @@ Testing set shape: (40, 1)
 - Visual comparison plot with first 100 samples (extended range for detailed analysis)
 - Linear relationship between features and sales captured
 
-## 💡 Key Insights
+## � Model Evaluation Metrics
+
+The model performance is evaluated using four key metrics:
+
+| Metric | Description | Formula |
+|--------|-------------|---------|
+| **MSE** (Mean Squared Error) | Average squared prediction error | $\frac{1}{n}\sum(y_{true} - y_{pred})^2$ |
+| **RMSE** (Root Mean Squared Error) | Standard deviation of prediction error | $\sqrt{MSE}$ |
+| **MAE** (Mean Absolute Error) | Average absolute prediction error | $\frac{1}{n}\sum\|y_{true} - y_{pred}\|$ |
+| **R²** (R-squared) | Proportion of variance explained by model | $1 - \frac{SS_{res}}{SS_{tot}}$ |
+
+### Interpretation
+- **Lower MSE/RMSE/MAE**: Better model fit (smaller prediction errors)
+- **Higher R²**: Better model fit (closer to 1.0 is perfect)
+- **R² = 0.7+**: Generally considered good predictive performance
+
+### Training vs Testing Evaluation
+- Training metrics show model performance on data it learned from
+- Testing metrics show generalization to unseen data
+- Significant difference may indicate overfitting
+
+## �💡 Key Insights
 
 - **TV Advertising**: Strongest correlation with sales, most impactful channel
 - **Radio Advertising**: Moderate positive relationship with sales
@@ -186,14 +216,16 @@ Testing set shape: (40, 1)
 
 ## 🚀 Future Enhancements
 
-- Build predictive linear regression models with scikit-learn
+- ✅ **Implemented**: Add statistical metrics (R², RMSE, MAE) - Model evaluation metrics now included
 - Implement multi-channel interaction analysis
-- Add statistical metrics (R², RMSE, correlation coefficients)
-- Create heatmaps for correlation matrices
-- Develop residual analysis and diagnostic plots
+- Create residual analysis and diagnostic plots
 - Add hypothesis testing for significance
-- Create export functionality for results
+- Create export functionality for results and model coefficients
 - Implement cross-validation for model robustness
+- Add prediction intervals and confidence bands
+- Build advanced visualization dashboards
+- Train multiple regression models for comparison
+- Implement feature importance analysis
 
 ## 📚 Code Reference
 
