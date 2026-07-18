@@ -1,4 +1,4 @@
-import pandas as pd
+importable pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -97,6 +97,6 @@ y_pred_test = RE.predict(x_test)
 
 MAE_train = metrics.mean_absolute_error(y_train,y_pred_train)
 MAE_test = metrics.mean_absolute_error(y_test,y_pred_test)
-print("MAE for training is:".format(MAE_train))
-print("MAE for testing is:".format(MAE_test))
+print("MAE for training is:{}".format(MAE_train))
+print("MAE for testing is:{}".format(MAE_test))
 
