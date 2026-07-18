@@ -230,7 +230,7 @@ The model performance is evaluated using four key metrics:
 
 | Problem | Solution |
 |---------|----------|
-| `FileNotFoundError` | Check dataset path at `/home/melancholy/Downloads/Advertising.csv` |
+| `FileNotFoundError` | Check dataset path at `/home/melancholy/Advertising.csv` |
 | `ModuleNotFoundError` | Run `pip install -r requirements.txt` |
 | Plots not displaying | Ensure matplotlib backend configured; may need `%matplotlib inline` in Jupyter |
 | Memory issues | Dataset is small; check available RAM |
