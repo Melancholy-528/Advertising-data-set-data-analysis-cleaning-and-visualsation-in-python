@@ -89,7 +89,7 @@ pip install pandas numpy seaborn matplotlib scikit-learn
 ### Step 2: Prepare Dataset
 Ensure Advertising dataset is at:
 ```
-/home/melancholy/Downloads/Advertising.csv
+/home/username/Advertising.csv
 ```
 
 ### Step 3: Run Analysis
