@@ -41,7 +41,7 @@ plt.show()
 #heatmap
 numeric_df = df.select_dtypes(include=["number"])
 corr_matrix = numeric_df.corr()
-hm1 = sns.heatmap(corr_matrix,cmap="coolwarm")
+hm1 = sns.heatmap(corr_matrix,cmap="coolwarm",annot = True)
 plt.show()
 
 #pairplot
